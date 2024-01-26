@@ -29,8 +29,10 @@ img {
 }
 
 .container {
-    width: 1158px;
-    padding: 0 15px;
+    /* width: 1158px; */
+    max-width: 320px;
+    /* padding: 0 15px; */
+    padding: 0 16px;
     margin: 0 auto;
 }
 
@@ -48,6 +50,19 @@ img {
         overflow: hidden;
     }
 
+        @media screen and (min-width: 768px) {
+            .container {
+                max-width: 768px;
+            }
+    
+            @media screen and (min-width: 1158px) {
+                .container {
+                    max-width: 1158px;
+                    padding: 0 15px;
+                }
+            }
+        }
+
 /*-------------------header------------------*/
 
 .header {
@@ -61,6 +76,7 @@ box-shadow: 2px 1px rgba(46, 47, 66, 0.08),
 .header-container {
 display: flex;
 align-items: center;
+justify-content: space-between;
 
 }
 
@@ -70,8 +86,9 @@ align-items: center;
 }
 
 .header-lict {
-    display: flex;
-    gap: 40px;
+    /* display: flex; */
+    display: none;
+    /* gap: 40px; */
 }
 
 .header-item {
@@ -84,9 +101,10 @@ align-items: center;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.17;
-    letter-spacing: 0.54px;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-right: 76px;
+    /* margin-right: 76px; */
+    padding: 17px 0;
 }
 
 .header-logo-part {
@@ -99,68 +117,118 @@ align-items: center;
     text-transform: uppercase;
 }
 
-.header-nav-link {
-    color: #2E2F42;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   
-}
-
-.header-nav-link:hover,
-.header-nav-link:focus {
-    color: #404BBF;
-}
-
-
-.current {
-position: relative;
-color: #404BBF;
-
-
-}
-
-.current::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    background-color: #404BBF;
-    border-radius: 2px;
-    height: 4px;
-    width: 100%;
-} 
-
 .header-address {
     font-style: normal;
     margin-left: auto;
+    display: none;
 }
 
 .header-adress-list {
-display: flex;
-gap: 40px;
+/* display: flex;
+gap: 40px; */
 }
 
 .header-address-item {
 
 }
 
-.header-address-contakt-link {
-    color:#434455;
+ .open-menu-btn {
+     padding: 0;
+     line-height: 0;
+     border-color: transparent;
+     cursor: pointer;
+ }
+
+ @media screen and (min-width: 768px) {
+    .open-menu-btn {
+        display: none;
+    }
+
+    .header-logo {
+        margin-right: 120px;
+    }
+
+    .header-lict {
+          display: flex;
+          gap: 40px;
+    }
+
+        .header-nav-link {
+            color: #2E2F42;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            display: block;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        }
+    
+        .header-nav-link:hover,
+        .header-nav-link:focus {
+            color: #404BBF;
+        }
+    
+    
+        .current {
+            position: relative;
+            color: #404BBF;
+        }
+    
+        .current::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            background-color: #404BBF;
+            border-radius: 2px;
+            height: 4px;
+            width: 100%;
+        }
+
+        .header-address {
+            display: block;
+        }
+
+        .header-address-contakt-link {
+            color: #434455;
+             /* font-size: 16px; */
+            font-size: 12px;
+            /* line-height: 1.5; */
+            line-height: 1.16;
+            letter-spacing: 0.02em;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .header-adress-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .header-address-contakt-link:hover,
+        .header-address-contakt-link:focus {
+            color: #404BBF;
+        }
+ }
+
+ @media screen and (min-width: 1158px) {
+    .header-logo {
+        margin-right: 76px;
+
+    }
+
+    .header-adress-list {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .header-item {
         font-size: 16px;
         line-height: 1.5;
-        letter-spacing: 0.02em;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);   
-}
- .header-address-contakt-link:hover,
- .header-address-contakt-link:focus {
-    color: #404BBF;
-   
+    }
  }
 
 /**--------------------------------------------*/
