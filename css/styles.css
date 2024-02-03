@@ -910,7 +910,7 @@ padding-bottom: 96px;
 }
 
 .footer-all {
-    margin-right: 120px;
+    /* margin-right: 120px; */
     margin-bottom: 72px;
 }
 
@@ -1007,12 +1007,12 @@ border-radius: 50%;
 }
 
 .footer-mail {   
-/* display: block; */
+display: block;
 align-items: baseline;
 /* margin-left: 80px; */
 font-style: normal;
 margin-top: 72px;
-flex-direction: column;
+/* flex-direction: column; */
 }
 
 .footer-text {
@@ -1030,6 +1030,7 @@ flex-direction: column;
 .footer-form {
     display: flex;
     gap: 24px;
+    flex-direction: column;
 }
 
 .footer-label {
@@ -1067,7 +1068,6 @@ flex-direction: column;
     border-radius: 4px;
     background-color: #4D5AE5;
     border: none;
-   
 }
 
 .footer-buuton-svg {
